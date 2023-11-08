@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote of the day</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quote-box">
+        <h2>Quote of the day</h2>
+        <blockquote id="quote">Loading...</blockquote>
+        <span id="author">Loading...</span>
+        <div>
+            <button onclick=getRandomQuote()
+            >New Quote</button>
+            <button onclick="tweet()"><img src="x.png" alt="X-Logo">Tweet</button>
+        </div>
+    </div>
+
+<script>
+    const quote=document.getElementById("quote");
+    const author=document.getElementById("author");
+    const quotes = ["Smart work lead's to lazyness","If you are struggling with motivation to be a winner, then you should stay a loser for the rest of your life.","Freedom will only come when you no longer trade your time for money.","The temporary satisfaction of quitting is outweighed by the eternal suffering of being nobody.","Your mind must be stronger than your feelings.", "You must put in the effort to get the life you want.","Your only option to level up is to begin talking to winners.","The harder you work, the more important you become.","A man without a vision for his future always returns to his past.","Do the impossible and you’ll never doubt yourself ever again.", "If you can not control your mind, you have zero control over anything in your life. You are just a feather in the wind, waiting for life to blow you from a happy place to a sad place.","Close your eyes. Focus on making yourself feel excited, powerful. Imagine yourself destroying goals with ease.","Find a person who is as successful as you’d like to be, ask them what to do, do it and work hard","If failure makes you stronger, you can never lose.","Success is not a destination, it’s a journey.","Success is the result of discipline, dedication, and sacrifice.","You are exactly where you deserve to be. Change who you are and you will change how you live.","There is no joy without pain." ,"Reject weakness in any form.","Arrogance breeds complacency and complacency breeds failure.", "Cost is the enemy of the poor man, so the poor try to save money. Time is the enemy of the rich man, so the rich try to save time.","If you are struggling with motivation to be a winner, then you should stay a loser for the rest of your life.","Men are not designed to be comfortable, they want to achieve, to feel pain and suffering, to conquer something." , "Broke people try to make money because they want to buy things." ,"You will never get rich without a plan","Win or lose, I always learn something.","Success is about hard work, discipline, and focus.","The only limitation you have is the one you set for yourself.","Never underestimate the power of persistence.","You can’t achieve greatness without taking risks.","Success is a mindset, not a destination.","The best investment you can make is in yourself.","Champions aren’t made in the ring, they are made in the gym.","Don’t be afraid to fail, be afraid not to try." ,"Your biggest competition is the person staring back at you in the mirror.","Success is not a sprint, it’s a marathon.","Learn from your mistakes, and use them to become stronger.","The only thing stopping you from achieving your goals is yourself.","Don’t wait for opportunities, create them.","Success is not luck, it’s a result of hard work and dedication.","If you want to achieve something, you have to be obsessed with it.","Believe in yourself, and you can accomplish anything.","Your success is determined by your mindset, not your circumstances.","It’s not about being perfect, it’s about being better than you were yesterday.","Success is a journey, not a destination.","If you want to change your life, change your mindset.","The only way to succeed is to keep moving forward, no matter how many times you fall.","Chase your dreams, not money."];
+    window.onload=function getRandomQuote() {
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+        var randomQuote= quotes[randomIndex];
+        var auth="Andrew Tate"
+
+        quote.innerHTML=randomQuote;
+        author.innerHTML=auth;
+    };
+   
+        function getRandomQuote() {
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+        var randomQuote= quotes[randomIndex];
+        var auth="Andrew Tate"
+
+        quote.innerHTML=randomQuote;
+        author.innerHTML=auth;
+    }
+
+
+   
+    function tweet(){
+        window.open("https://twitter.com/intent/tweet?text="+randomQuote+"----by Andrew Tate","Tweet Window","width=600,height=300");
+    }
+</script>
+</body>
+</html>
